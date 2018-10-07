@@ -39,7 +39,7 @@ class ComprehensionTransformer(ast.NodeTransformer):
         return build_call(node.generators, node.elt)
 
 
-def gonad(monad_cls):
+def monad_comprehension(monad_cls):
     def decorator(f):
         # first, uncompile the code into an ast
         source = inspect.getsource(f)
