@@ -2,6 +2,8 @@
 
 monad_comprehension.py enables you to perform monadic computations with the list comprehension syntax. It is powered by [ast transformations](https://docs.python.org/3.7/library/ast.html).
 
+It is known to work with Python 3.6 and above.
+
 # Example: the Maybe monad
 
 Let's define the Maybe monad like this:
