@@ -6,7 +6,7 @@ gonad.py enables you to perform monadic computations with the list comprehension
 
 Let's define the Maybe monad like this:
 
-```
+```py3
 class Maybe(object):
 
     def __init__(self, value):
@@ -34,10 +34,14 @@ class Maybe(object):
         new_value = f(self.value)
         return Maybe.unit(new_value)
 
+    def __str__(self):
+        if self.is_nothing():
+            return f"Nothing"
+        return f"Just {self.val}"
 ```
 
 We can then adapt the semantics of the comprehension syntax with this:
-```
+```py3
 @gonad(Maybe)
 def f():
     return [
@@ -69,4 +73,4 @@ This is still in a very experimental stage, and is probably not ready yet for pr
 
 # References
 
-This idea of monad comprehension is very similar to [Haskell's do notation](https://en.wikibooks.org/wiki/Haskell/do_notation). This is also inspired by this [blog post](http://blog.sigfpe.com/2012/03/overloading-python-list-comprehension.html).
+This is inspired by this [blog post](http://blog.sigfpe.com/2012/03/overloading-python-list-comprehension.html). Also, this idea of monad comprehension is very similar to [Haskell's do notation](https://en.wikibooks.org/wiki/Haskell/do_notation).
