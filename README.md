@@ -1,6 +1,6 @@
-# gonad.py
+# monad_comprehension.py
 
-gonad.py enables you to perform monadic computations with the list comprehension syntax. It is powered by [ast transformations](https://docs.python.org/3.7/library/ast.html).
+monad_comprehension.py enables you to perform monadic computations with the list comprehension syntax. It is powered by [ast transformations](https://docs.python.org/3.7/library/ast.html).
 
 # Example: the Maybe monad
 
@@ -42,7 +42,7 @@ class Maybe(object):
 
 We can then adapt the semantics of the comprehension syntax with this:
 ```py3
-@gonad(Maybe)
+@monad_comprehension(Maybe)
 def f():
     return [
         (x + y)
@@ -52,7 +52,7 @@ def f():
 
 f()  # outputs `Just 11`
 
-@gonad(Maybe)
+@monad_comprehension(Maybe)
 def g():
     return [
         (x + y)
@@ -65,7 +65,7 @@ g()  # outputs `Nothing`
 
 # Comprehending an arbitrary monad
 
-You can provide any class which implements `unit` and `bind` methods to the `gonad`decorator.
+You can provide any class which implements `unit` and `bind` methods to the `monad_comprehension`decorator.
 
 # Status of the project
 
