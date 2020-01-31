@@ -39,7 +39,7 @@ class Maybe(object):
     def __str__(self):
         if self.is_nothing():
             return f"Nothing"
-        return f"Just {self.val}"
+        return f"Just {self.value}"
 ```
 
 We can then adapt the semantics of the comprehension syntax with this:
