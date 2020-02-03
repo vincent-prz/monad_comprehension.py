@@ -2,7 +2,7 @@
 
 monad_comprehension.py enables you to perform monadic computations with the list comprehension syntax, as suggested by [this article](http://blog.sigfpe.com/2012/03/overloading-python-list-comprehension.html). It is powered by [ast transformations](https://docs.python.org/3.7/library/ast.html).
 
-It is known to work with Python 3.6 and above.
+It is known to work with Python 3.6.
 
 # Example: the Maybe monad
 
