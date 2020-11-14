@@ -77,4 +77,4 @@ This is still in a very experimental stage, and is probably not ready yet for pr
 
 This is inspired by this [blog post](http://blog.sigfpe.com/2012/03/overloading-python-list-comprehension.html). Also, this idea of monad comprehension is very similar to [Haskell's do notation](https://en.wikibooks.org/wiki/Haskell/do_notation).
 
-Besides, this is derived for [this talk](http://slides.com/v-perez/pythonic-monads-in-real-life#/) I gave at PyconFR.
+Besides, this is derived for [this talk](https://archive.fosdem.org/2020/schedule/event/python2020_monads/) I gave at FOSDEM 2020.
